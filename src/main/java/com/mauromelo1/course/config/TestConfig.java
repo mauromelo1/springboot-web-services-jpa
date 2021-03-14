@@ -11,7 +11,6 @@ import com.mauromelo1.course.entities.User;
 import com.mauromelo1.course.repositories.UserRepository;
 
 @Configuration
-@Profile("test")
 public class TestConfig implements CommandLineRunner{
 	
 	@Autowired
