@@ -19,12 +19,12 @@ public class OrderItem implements Serializable {
 	private OrderItemPK id = new OrderItemPK();
 
 	private Integer quantity;
-	private double price;
+	private Double price;
 
 	public OrderItem() {
 	}
 
-	public OrderItem(Order order, Product product, Integer quantity, double price) {
+	public OrderItem(Order order, Product product, Integer quantity, Double price) {
 		super();
 		id.setOrder(order);
 		id.setProduct(product);
@@ -57,11 +57,11 @@ public class OrderItem implements Serializable {
 		this.quantity = quantity;
 	}
 
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

@@ -16,6 +16,7 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.mauromelo1.course.entities.enums.OrderStatus;
+import com.mauromelo1.course.entities.pk.OrderItemPK;
 
 @Entity
 @Table(name = "tb_order")
@@ -36,6 +37,13 @@ public class Order implements Serializable {
 	@JoinColumn(name = "client_id")
 	private User client;
 
+	/*
+	 public class OrderItem implements Serializable {
+	 private OrderItemPK id = new OrderItemPK(); 
+	 
+	 public class OrderItemPK implements Serializable {
+	 private Order order;	 
+	*/
 	@OneToMany(mappedBy = "id.order")
 	private Set<OrderItem> items = new HashSet<>();
 
